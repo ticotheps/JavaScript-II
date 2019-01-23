@@ -7,14 +7,15 @@ function getBuckets(buckets) {
   debugger;
 
   function deepBuckets() {
-    //myPoints is not defined in this function
-    const treyBallLand = "Chef Curry RANGE!";
+    // Accessing myPoints outside of this function requires use of a closure
+    const treyBallLand = "Chef Curry RANGE";
     console.log(`My name is Tico and I caught fire from ${treyBallLand}, managing to hit ${myPoints} trey balls!`);
     debugger;
 
     function freeBuckets() {
-      const freebie = "count it!";
-      console.log(`Whenever I get fouled while shooting from ${treyBallLand}, you can pretty much say ${freebie}`);
+      // Accessing treyBallLand outside of this function requires use of closure
+      const freebie = "count it";
+      console.log(`Whenever I get fouled while shooting from ${treyBallLand}, you can pretty much say '${freebie}'!`);
       debugger;
     }
 
