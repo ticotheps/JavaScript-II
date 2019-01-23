@@ -1,6 +1,31 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function getBuckets(buckets) {
+  const myPoints = buckets*2;
+  console.log(`My name is Tico and I got ${buckets} "buckets" today, which is equal to ${myPoints} points!`);
+  debugger;
+
+  function deepBuckets() {
+    //myPoints is not defined in this function
+    const treyBallLand = "Chef Curry RANGE!";
+    console.log(`My name is Tico and I caught fire from ${treyBallLand}, managing to hit ${myPoints} trey balls!`);
+    debugger;
+
+    function freeBuckets() {
+      const freebie = "count it!";
+      console.log(`Whenever I get fouled while shooting from ${treyBallLand}, you can pretty much say ${freebie}`);
+      debugger;
+    }
+
+    freeBuckets();
+
+  }
+
+  deepBuckets();
+}
+
+getBuckets(4);
 
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
