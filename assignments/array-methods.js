@@ -97,11 +97,38 @@ let ticketPriceTotal = runners.reduce(function(totalDonations, currentValue) {
 
 console.log(ticketPriceTotal);
 
+
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// Convert each runner's last name into ALL CAPS and log the result.
+let lastNameCaps = runners.map(function(currentValue) {
+    return currentValue["last_name"].toUpperCase();
+});
+
+console.log(lastNameCaps);
+
 
 // Problem 2
+// Get a list of all the runners who donated more than $200. Return an array named 'moreThanTwoHundred' that contains information about all of the runners that donated more than $200 and log the result.
+let moreThanTwoHundred = runners.filter(function(currentValue) {
+    return currentValue.donation > 200; 
+});
+
+console.log(JSON.stringify(moreThanTwoHundred));
 
 // Problem 3
+// Find the total amount of money donated from runners with id between 1 and 25. Add up all the donations and log the result.
+let first25 = runners.filter(function(currentValue) {
+    return currentValue.id <= 25; 
+});
+
+console.log(JSON.stringify(first25));
+
+
+let firstHalfRunnersDonation = first25.reduce(function(sumOfDonations, currentValue) {
+        return sumOfDonations + currentValue.donation;
+}, 0);
+
+console.log(firstHalfRunnersDonation);
