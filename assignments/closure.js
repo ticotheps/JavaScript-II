@@ -1,14 +1,58 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function getBuckets(buckets) {
+  const myPoints = buckets*2;
+  console.log(`My name is Tico and I got ${buckets} "buckets" today, which is equal to ${myPoints} points!`);
+  debugger;
+
+  function deepBuckets() {
+    // Accessing myPoints outside of this function requires use of a closure
+    const treyBallLand = "Chef Curry RANGE";
+    console.log(`My name is Tico and I caught fire from ${treyBallLand}, managing to hit ${myPoints} trey balls!`);
+    debugger;
+
+    function freeBuckets() {
+      // Accessing treyBallLand outside of this function requires use of closure
+      const freebie = "count it";
+      console.log(`Whenever I get fouled while shooting from ${treyBallLand}, you can pretty much say '${freebie}'!`);
+      debugger;
+    }
+
+    freeBuckets();
+
+  }
+
+  deepBuckets();
+}
+
+getBuckets(4);
 
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
+  let count = 0;
+  
+  // I DON'T REALLY UNDERSTAND EXACTLY WHAT'S HAPPENING HERE
+  return () => (++count);
 };
 // Example usage: const newCounter = counter();
 // newCounter(); // 1
 // newCounter(); // 2
+
+const newCounter = counter();
+
+console.log(newCounter()); // 1
+console.log(newCounter()); // 2
+console.log(newCounter()); // 3
+console.log(newCounter()); // 4
+console.log(newCounter()); // 5
+console.log(newCounter()); // 6
+console.log(newCounter()); // 7
+console.log(newCounter()); // 8
+console.log(newCounter()); // 9
+console.log(newCounter()); // 10
+
 
 /* STRETCH PROBLEM, Do not attempt until you have completed all previous tasks for today's project files */
 
